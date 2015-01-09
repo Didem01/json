@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MOBİL KÜTÜPHANE</title>
+ <meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.4.min.css" />
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/jquery.mobile-1.4.4.min.js"></script>
+</head>
+            <style>
+body {
+    background-color: #d0e4fe;
+}
+
+h1 {
+    color: orange;
+    text-align: center;
+   
+}
+
+
+</style>
+<body>
+
+<div data-role="page">
+
+	<div data-role="header">
+		<center><h1>MOBİL KÜTÜPHANE</h1></center>
+	</div><!-- /header -->
+    			<center><img class="irc_mi" style="margin-top: 39px;" src="http://www.edebiyathaber.net/wp-content/uploads/2013/07/kitap.jpg" width="700" height="345"></center>
+ 
+    <style>
+        p1 {
+    font-family: "Arial Black";
+    font-size: 20px;
+}</style>
+    
+    <style> h2 {
+    color: orange;
+    text-align: center; 
+        h2 {
+    font-family: "Arial Black";
+    font-size: 22px;
+}
+
+
+    </style>
+    <center><h2>KİTAP LİSTESİ</h2></center>
+   <center> <p1 id="demo"></p1></center>
+ 
+    
+<script>
+var text = '{ "books" : [' +
+'{ "title":"ALDATMAK" , "publishedDate":"" },' +
+'{ "title":"ELİF" , "publishedDate":"" },' +
+'{ "title":"BEN BİR AĞACIM" , "publishedDate":"" },' +
+'{ "title":"ASILACAK KADIN" , "publishedDate":"" },' +
+'{ "title":"TUHAF BİR KADIN" , "publishedDate":"" },' +
+'{ "title":"DÖNÜŞÜM" , "publishedDate":"" },' +
+'{ "title":"GÖZLERİN FISILTISI" , "publishedDate":"" },' +
+'{ "title":"YALNIZ GEZENİN DÜŞLERİ" , "publishedDate":"" },' +
+'{ "title":"ŞİİR ÇEVİRİLERİ" , "publishedDate":"" },' +
+'{ "title":"AŞK ÖLÜMDEN UYANIŞTIR" , "publishedDate":"" } ]}';
+    
+    
+  obj=JSON.parse(text); 
+    
+ for(var i=0;i<text.length;i++){
+    
+   document.getElementById("demo").innerHTML +=
+   obj.books[i].title+" "+obj.books[i].publishedDate+"<br>";
+   
+}
+</script>
+
+	<div role="main" class="ui-content">
+
+	</div><!-- /content -->
+                <ul data-role="listview" data-inset="true" data-filter="true" data-input="#filter-for-listview">
+   
+    <li><a href="ozet.html">KİTABA DAİR</a></li>
+    <li><a href="hakkında.html">KİTAB HAKKINDA</a></li>
+    
+    
+    
+    
+   
+</ul>
+
+	
+</div><!-- /page -->
+
+</body>
+</html>
